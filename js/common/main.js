@@ -16,6 +16,7 @@ require.config({
         settings: 'js/home/settings',
         tcEdit: 'js/teacher/edit',
         tcList: 'js/teacher/list',
+        tcAdd:  'js/teacher/add',
         usProfile: 'js/user/profile',
         usList: 'js/user/list',
         csAdd: 'js/course/add',
@@ -30,11 +31,15 @@ require.config({
         header: 'js/common/header',
         util: 'js/common/util',
     //    第三方模块
-        //依赖JQ文件的
         jquery: 'lib/jquery/jquery.min',
+        //依赖JQ文件的
+
         bootstrap: 'lib/bootstrap/js/bootstrap.min',
         jquery_form:'lib/jquery-form/jquery.form',
+        jquery_cookie: 'lib/jquery-cookie/jquery.cookie',
     //    不依赖JQ的
+        nprogress: 'lib/nprogress/nprogress',
+        template:   'lib/artTemplate/template'
     },
 //    配置普通模块的依赖或者输出
     shim:{
@@ -57,6 +62,7 @@ var obj = {
     '/html/home/settings.html': 'settings',
     '/html/teacher/edit.html': 'tcEdit',
     '/html/teacher/list.html': 'tcList',
+    '/html/teacher/add.html': 'tcAdd',
     '/html/user/profile.html': 'usProfile',
     '/html/user/list.html': 'usList',
     '/html/course/add.html': 'csAdd',
@@ -75,4 +81,4 @@ var obj = {
 // 根据页面的pathname获取要加载的模块名
 var moduleName = obj[location.pathname];
 //加载这个模块，这个模块我们称为页面的主模块
-require([moduleName])
+require([moduleName]);

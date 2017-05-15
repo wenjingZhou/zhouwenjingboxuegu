@@ -13,7 +13,7 @@
             <div class="avatar">
                 <img src="./uploads/monkey.png" class="img-circle" alt="">
             </div>
-            <form id="login-form" action="" class="col-xs-offset-1 col-xs-10" >
+            <form id="login-form" action="/v6/login" method="post"  class="col-xs-offset-1 col-xs-10" >
                 <div class="input-group input-group-lg">
                     <span class="input-group-addon">
                         <i class="fa fa-user"></i>
@@ -30,8 +30,9 @@
             </form>
         </div>
     </div>
-
+    <!--遮罩层-->
+    <?php include($_SERVER['DOCUMENT_ROOT'] . '/html/common/loading.html')?>
     <!-- 加载require入口模块-->
-    <script src='/lib/requirejs/require-2.3.3.js' data-main='/js/common/main'></script>
+    <script src="/lib/requirejs/require-2.3.3.js" data-main="/js/common/main"></script>
 </body>
 </html>
